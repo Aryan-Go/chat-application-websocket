@@ -13,5 +13,8 @@ wss.on("connection", (socket) => {
             all_socket[i].send(e.toString());
         }
     })
+    socket.on("disconnect", () => {
+        all_socket = all_socket.filter((s) => s != socket);
+    })
 })
 

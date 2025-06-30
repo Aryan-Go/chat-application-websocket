@@ -14,6 +14,7 @@ function App() {
     }
     else {
       ws.send(message);
+      set_message("");
     }
   }
   useEffect(() => {
@@ -37,7 +38,7 @@ function App() {
   
   return (
     <>
-      <div className="bg-black h-[100vh] w-full text-white flex flex-col items-center">
+      <div className="bg-black min-h-screen  h-max w-full text-white flex flex-col items-center">
         <h1 className="text-center text-[5rem] bg-white text-black p-[1rem] rounded-[1rem]">Welcome to the chat application</h1>
         {/* <label className="text-white">What is your message</label> */}
         <div className="flex flex-row w-[100%] justify-center items-center">
